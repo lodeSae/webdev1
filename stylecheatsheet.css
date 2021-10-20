@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+/*bijschrijft van een table wijzigen*/
+caption {
+  caption-side: bottom;
+}
+
+.last {
+  background-color: royalblue;
+}
