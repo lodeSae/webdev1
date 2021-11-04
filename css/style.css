@@ -1,0 +1,115 @@
+/*Regels zijn van toepassing op elk element
+in de pagina. */
+* {
+  color: rgb(139, 46, 131);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(../images/background.png);
+  background-attachment: fixed; /* ◦ Een afbeelding schuift standaard mee met de rest van de pagina, maar je kan hem
+  ook vastzetten*/
+  font-size: 14px;
+  line-height: 1.2; /* Best practice: 1.5 => line-height = 1.5 * font-size */
+
+  /* vergroot de afstand tussen letters */
+  letter-spacing: 0.7em;
+  /* verkleint de afstand tussen letters */
+  letter-spacing: -1px;
+  /* vergroot de afstand tussen woorden */
+  word-spacing: 2px;
+  /* verandert de regelhoogte. Bij voorkeur een unitless getal: dan wordt de
+huidige fontsize hiermee vermenigvuldigd. */
+  line-height: 1.5;
+  /* tekst uitlijnen (left, right, justify (=uitvullen), center, match-parent*/
+  /* eerste regel van tekst laten inspringen (ook negatieve waarde toegelaten) */
+  text-indent: 2em;
+}
+
+h1 {
+  background-color: rgba(17, 52, 167, 0.2);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3em; /*42px = 3*14px(van body)*/
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  background-color: rgba(206, 161, 65, 0.2);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+table {
+  border-collapse: collapse;
+
+  font-size: 14px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+/*bijschrijft van een table wijzigen*/
+caption {
+  caption-side: bottom;
+}
+
+.last {
+  background-color: royalblue;
+}
+
+.noborder,
+.noborder td {
+  border: 0px;
+}
+
+ol {
+  list-style-type: upper-alpha;
+}
+
+ul {
+  list-style-image: url("../images/star.png");
+  list-style-position: inside;
+}
+
+#idtitel {
+  color: red;
+}
+h3,
+.classtitel {
+  color: rgb(211, 28, 135);
+}
+
+div #naam {
+  background: aqua;
+}
+
+/* we verwijderen de onderstreping
+bij alle links */
+a {
+  text-decoration: none;
+  color: red;
+  font-size: 1.2rem;
+}
+/* en als er gehoverd wordt over een
+  link dan onderstrepen we de link */
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* paragrafen die onmiddellijk na een h1 komen */
+h1 + p {
+  font-weight: bold;
+}
+/* alle paragrafen na een paragraaf */
+p ~ p {
+  font-weight: bold;
+}
+
+
