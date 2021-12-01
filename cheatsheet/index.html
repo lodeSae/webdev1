@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Cheatsheet</title>
+    <style>
+      h1 {
+        font-size: 6em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--Inline styles hebben voorrang op andere styles.-->
+
+    <h1 style="color: hotpink">Cheatsheet</h1>
+    <div id="menu">
+      <ul>
+        <li>Home</li>
+        <li>Products</li>
+        <li class="nietzichtbaar">About</li>
+        <li><a href="#grid">Grid</a></li>
+      </ul>
+    </div>
+    <h2 class="classtitel">Paragrafen</h2>
+
+    <p class="overflow">
+      venenatis cras. Mi in nulla posuere sollicitudin aliquam ultrices
+      sagittis. Id neque aliquam vestibulum morbi blandit cursus risus at.
+      Semper auctor neque vitae tempus quam pellentesque nec nam aliquam. Varius
+      vel pharetra vel turpis. Pretium lectus quam id leo in vitae turpis. Eget
+      aliquet nibh praesent tristique magna sit.
+    </p>
+    <p>
+      venenatis cras. Mi in nulla posuere sollicitudin aliquam ultrices
+      sagittis. Id neque aliquam vestibulum morbi blandit cursus risus at.
+      Semper auctor neque vitae tempus quam pellentesque nec nam aliquam. Varius
+      vel pharetra vel turpis. Pretium lectus quam id leo in vitae turpis. Eget
+      aliquet nibh praesent tristique magna sit.
+    </p>
+
+    <p>
+      venenatis cras. Mi in nulla posuere sollicitudin aliquam ultrices
+      sagittis. Id neque aliquam vestibulum morbi blandit cursus risus at.
+      Semper auctor neque vitae tempus quam pellentesque nec nam aliquam. Varius
+      vel pharetra vel turpis. Pretium lectus quam id leo in vitae turpis. Eget
+      aliquet nibh praesent tristique magna sit.
+    </p>
+
+    <h2>Link</h2>
+    <a href="http://google.be" target="_blank"
+      >Dit is een link naar google op een nieuwe pagina</a
+    >
+
+    <h2>Ordered List</h2>
+    <h3>Simple example</h3>
+    <ol>
+      <li>Mix flour, baking powder and sugar.</li>
+      <li>In another bowl, mix eggs and milk.</li>
+      <li>Stir both mixtures together.</li>
+      <li>Fill muffin tray 3/4 full.</li>
+      <li>Bake for 20 minutes.</li>
+    </ol>
+
+    <h3>Using Roman Numeral type</h3>
+    <ol type="i">
+      <li>Introduction</li>
+      <li>List of Grievances</li>
+      <li>Conclusion</li>
+    </ol>
+
+    <h2>Unordered List good for Navigation</h2>
+    <ul>
+      <li>apples</li>
+      <li>oranges</li>
+      <li>bananas</li>
+    </ul>
+
+    <h2>Description List</h2>
+    <h3>Example HTTP response status codes</h3>
+    <dl>
+      <dt>200 OK</dt>
+      <dd>The request has succeeded.</dd>
+      <dt>404 Not Found</dt>
+      <dd>
+        The server can not find the requested resource. This response code is
+        probably the most famous one due to its frequent occurrence on the web.
+      </dd>
+      <dt>500 Internal Server Error</dt>
+      <dd>
+        The server has encountered a situation it doesn't know how to handle.
+      </dd>
+    </dl>
+
+    <h2>Nested lists</h2>
+    <ol>
+      <li>first item</li>
+      <li>
+        second item
+        <!-- closing </li> tag not here! -->
+        <ul>
+          <li>second item first subitem</li>
+          <li>second item second subitem</li>
+          <li>second item third subitem</li>
+        </ul>
+      </li>
+      <!-- Here's the closing </li> tag -->
+      <li>third item</li>
+    </ol>
+
+    <h2>Tabellen</h2>
+    <table>
+      <caption>
+        Bijschrift voor een tabel
+      </caption>
+      <!--kolommen uit de tabel specifiëren, zodat alle cellen binnen deze kolommen dezelfde opmaak kunnen krijgen. -->
+      <colgroup>
+        <col span="3" />
+        <col class="last" />
+      </colgroup>
+      <!-- head van de tabel-->
+      <thead>
+        <!--Rijen-->
+        <tr>
+          <!--kolommen-->
+          <!--Accesibility tabellen scope -->
+          <th scope="col">Hoofding 1</th>
+          <th>Hoofding 2</th>
+          <th>Hoofding 3</th>
+          <th>Hoofding 4</th>
+        </tr>
+      </thead>
+      <!-- body van de tabel-->
+      <tbody>
+        <tr>
+          <td>data</td>
+          <!--rowspan cel verspreiden over meer dan 1 kolom-->
+          <td rowspan="2">rowspan</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+
+        <tr>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+
+        <tr>
+          <!--colspan cel verspreiden over meer dan 1 kolom-->
+
+          <td colspan="3">colspan</td>
+          <td>data</td>
+        </tr>
+      </tbody>
+      <!-- footer van de tabel-->
+      <tfoot>
+        <tr>
+          <td colspan="4">footer</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h2>Tabel uit oefening</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Wat?</th>
+          <th>Naam</th>
+          <th>Adres</th>
+          <th>Openingsuren</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Raamdecoratie</td>
+          <td>Tende Aalst</td>
+          <td>Kanunnik Colinetplein 3 - Aalst</td>
+          <td>
+            <table class="noborder">
+              <tbody>
+                <tr>
+                  <td>Maandag - Vrijdag</td>
+                  <td>10h00 - 18h00</td>
+                </tr>
+                <tr>
+                  <td>Zaterdag</td>
+                  <td>10h00 - 17h30</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>Zonwering</td>
+          <td>GUDI</td>
+          <td>Erpe Mere</td>
+          <td>
+            <table class="noborder">
+              <tbody>
+                <tr>
+                  <td>Maandag - Vrijdag</td>
+                  <td>09h00 - 12h00 en 13h00 - 17h30</td>
+                </tr>
+                <tr>
+                  <td>Zaterdag</td>
+                  <td>09h00 - 12h00</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>Tapijten</td>
+          <td rowspan="2">DVDM</td>
+          <td rowspan="2">Eikstraat 89 - Aalst</td>
+          <td rowspan="2">Op afspraak</td>
+        </tr>
+        <tr>
+          <td>Vinylvloeren</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Formulieren</h2>
+    <!--Method post= via http request secure data ,Method get = via url non secure data-->
+    <!--autocomplete: bepaalt of autocomplete voor alle velden van het formulier aan of af staat. Dit is ook een attribuut voor decontrols afzonderlijk.
+    Mogelijke waarden zijn: on en off novalidate: specificeert dat de data niet gevalideerd moet worden wanneer het formulier gesubmit wordt. In dat geval schrijven we gewoon novalidate (zonder waarde voor het attribuut)-->
+
+    <form action="/order" method="post" autocomplete="on">
+      <fieldset>
+        <!--Structuur brengen in verschillende delen van het formulier-->
+
+        <legend>Plaats bestelling</legend>
+
+        <div>
+          <label for="naam">Naam</label>
+          <input
+            type="text"
+            name="naam"
+            id="naam"
+            placeholder="Naam"
+            required
+          />
+        </div>
+        <div>
+          <label for="voornaam">Voornaam</label>
+          <input
+            type="text"
+            name="voornaam"
+            id="voornaam"
+            placeholder="Voornaam"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+
+        <div>
+          <label for="wachtwoord">Wachtwoord</label>
+          <input type="password" name="wachtwoord" id="wachtwoord" required />
+        </div>
+
+        <div>
+          <label for="pizza">Pizza</label>
+          <select name="pizza" id="pizza" required>
+            <option value="" selected>Maak je keuze</option>
+            <option value="4fromaggi">Quatro fromaggi</option>
+            <option value="mozzarello">Mozarello</option>
+            <option value="speciale">Speciale</option>
+            <option value="bolognese">Bolognese</option>
+          </select>
+        </div>
+
+        <div>
+          <!--multiple attribuut om meerdere keuzes toe te laten,size attribuut om meerdere opties te tonenAttribuut selected om default keuze aan te duiden-->
+          <select name="pizza2" size="3" id="pizza2" multiple>
+            <option value="napolitano">Napolitano</option>
+            <option value="4fromage">Quatro fromaggi</option>
+            <!--Attribuut selected om default keuze aan te duiden-->
+
+            <option value="napolitano" selected>Mozarrello</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="aantal">Aantal</label>
+          <input
+            type="number"
+            name="aantal"
+            id="aantal"
+            min="1"
+            max="5"
+            required
+          />
+        </div>
+
+        <div>
+          <div class="description">Extra's?</div>
+          <!-- value mag ingevuld zijn. Default is “on”.-->
+          <input
+            type="checkbox"
+            id="kaas"
+            name="extras"
+            value="kaas"
+            checked
+          /><label for="kaas">kaas</label>
+          <input type="checkbox" name="extras" id="hesp" value="hesp" /><label
+            for="hesp"
+            >hesp</label
+          >
+          <input
+            type="checkbox"
+            name="extras"
+            id="tomaten"
+            value="tomaten"
+            checked
+          /><label for="tomaten">tomaten</label>
+        </div>
+        <div>
+          <label for="datum">Datum</label>
+          <input type="date" name="datum" id="datum" required />
+        </div>
+        <div>
+          <div class="description">Uur</div>
+          <!--value moet ingevuld zijn: deze waarde zal verstuurd worden-->
+
+          <input
+            type="radio"
+            name="levering"
+            id="lev16"
+            value="1618"
+            required
+          />
+          <label for="lev16">16-18u</label>
+
+          <input
+            type="radio"
+            name="levering"
+            id="lev18"
+            value="1820"
+            checked
+            required
+          />
+          <label for="lev18">18-20u</label>
+
+          <input
+            type="radio"
+            name="levering"
+            id="lev20"
+            value="2022"
+            required
+          />
+          <label for="lev20">20-22u</label>
+        </div>
+
+        <br />
+
+        <div>
+          <label for="bezorger">Kies je bezorger</label>
+          <input list="bezorgers" id="bezorger" name="bezorger" />
+          <datalist id="bezorgers">
+            <option value="Stefaan Samyn"></option>
+            <option value="Karine Samyn"></option>
+            <option value="Patrick Lauwaerts"></option>
+            <option value="Lotte Vansteenberghe"></option>
+            <option value="Stefaan De Cock"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="extra">Extra informatie</label>
+          <textarea name="extra" id="extra"></textarea>
+        </div>
+      </fieldset>
+
+      <div>
+        <h2>Ander voorbeeld:</h2>
+        <label
+          ><input type="radio" name="examen" value="campusLaptop" required />Op
+          de campus op laptop</label
+        ><br />
+        <label
+          ><input type="radio" name="examen" value="flandersExpo" />In Flanders
+          Expo - schriftelijk</label
+        ><br />
+        <label
+          ><input type="radio" name="examen" value="onLine" />Online op
+          laptop</label
+        ><br />
+        <label
+          ><input type="radio" name="examen" value="mondeling" />Online
+          mondeling</label
+        >
+      </div>
+      <input type="submit" value="Bestel" />
+    </form>
+    <h2>CSS selectors:</h2>
+    <img src="images/selector.jpg" alt="selector" />
+    <h2>Types styles:</h2>
+    <img src="images/inlineauthoruseragent.jpg" alt="inlineauthoruseragent" />
+    <h2>Specificiteit</h2>
+    <img src="images/specificiteit.jpg" alt="specificiteit" />
+
+    <h2>Display Property</h2>
+    <img src="images/display.jpg" alt="display" />
+
+    <h2>Box</h2>
+    <img src="images/box.jpg" alt="box" />
+
+    <h2>Demonstrating the Box Model</h2>
+    <p>
+      The CSS box model is essentially a box that wraps around every HTML
+      element. It consists of: borders, padding, margins, and the actual
+      content.
+    </p>
+    <div id="box">
+      This text is the actual content of the box. We have added a 20px padding,
+      20px margin and a 6px green border. Also the width and height has been
+      defined.
+    </div>
+
+    <img src="images/totaleruimte.jpg" alt="totaleruimte" /> <br />
+    <img src="images/verkortenotatie.jpg" alt="verkortenotatie" />
+
+    <h2>Box Sizing</h2>
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"
+      target="_blank"
+      >Box-sizing Developer</a
+    >
+    <div><img src="images/boxsizing.jpg" alt="boxsizing" /></div>
+
+    <h2>Box-shadow</h2>
+    <img src="images/boxshadow.jpg" alt="boxshadow" />
+
+    <h2>Algemene procedure gebruik Grid Layout</h2>
+    <ol class="grid-procedure">
+      <li>
+        Creëer een grid container. Hiermee definieer je impliciet ook de grid
+        items
+      </li>
+      <li>Definieer de grid</li>
+      <li>Plaats de grid items op de grid.</li>
+    </ol>
+
+    <h2 id="grid">Grid voorbeelden:</h2>
+    <a href="docs/cheat-sheet-css-grid.pdf" target="_blank"
+      >Cheatsheet css-grid
+    </a>
+
+    <p>
+      Merk op dat de getallen bij grid-row en grid-column lijnnummers zijn.
+      'grid-row: 3/5’ (betekent dus dat de div rij 3 en rij 4 overspant
+    </p>
+
+    <div class="grid-container">
+      <div>item1</div>
+      <div>item2</div>
+      <div>item3</div>
+      <div>item4</div>
+    </div>
+
+    <p>
+      Aangezien we niet expliciet het aantal en de hoogte van de rijen opgeven,
+      zullen er automatisch rijen worden aangemaakt, waarbij ook de hoogte
+      automatisch bepaald wordt.
+    </p>
+    <div class="grid-container2">
+      <div>one</div>
+      <div>two</div>
+      <div>three</div>
+      <div>four</div>
+      <div>five</div>
+    </div>
+
+    <p>
+      Voorbeeld met één non-flexible column track (500px) en twee flexible
+      column tracks. De ‘leftover space’ wordt verdeeld over de tweede en de
+      derde kolom. Hiervoor wordt de ‘leftover space’ eerst in drie gedeeld en
+      hiervan krijgt de tweede kolom één deel en de derde kolom twee delen.
+    </p>
+
+    <div class="grid-container3">
+      <div>one</div>
+      <div>two</div>
+      <div>three</div>
+      <div>four</div>
+      <div>five</div>
+    </div>
+    <p>
+      De hoogte van de eerste rijen stellen we in op 100px en eventuele
+      bijkomende impliciet gecreeerde rijen krijgen een hoogte van 150px
+    </p>
+    <div class="grid-container4">
+      <div>one</div>
+      <div>two</div>
+      <div>three</div>
+      <div>four</div>
+      <div>five</div>
+    </div>
+
+    <p>
+      De rijhoogte van de rijen is minimaal 100px en maximaal de hoogte van de
+      inhoud.
+    </p>
+    <div class="grid-container5">
+      <div>one</div>
+      <div>
+        two
+        <p>i have some more content in</p>
+        <p>This makes me taller than 100px</p>
+      </div>
+
+      <div>three</div>
+      <div>four</div>
+      <div>five</div>
+    </div>
+
+    <h2>positioneren van grid items op de grid</h2>
+
+    <div class="grid-container6">
+      <div class="box1">one</div>
+      <div class="box2">two</div>
+      <div class="box3">three</div>
+      <div class="box4">four</div>
+
+    </div>
+
+
+    <h2>Overlappende grid items</h2>
+
+    <div class="grid-container6">
+      <div class="box5">one</div>
+      <div class="box6">two</div>
+      <div class="box7">three</div>
+      <div class="box8">four</div>
+
+    </div>
+
+    <h2>Gutters</h2>
+    <div class="grid-container7">
+      <div>one</div>
+      <div>two</div>
+      <div>three</div>
+      <div>four</div>
+      <div>five</div>
+    </div>
+
+    <h2>Box alignment in CSS Grid Layout</h2>
+    <div class="wrapper">
+      <div class="item1">Item 1</div>
+      <div class="item2">Item 2</div>
+      <div class="item3">Item 3</div>
+      <div class="item4">Item 4</div>
+      </div>
+
+      
+
+  </body>
+</html>
